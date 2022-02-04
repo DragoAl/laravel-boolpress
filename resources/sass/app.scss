@@ -3,6 +3,11 @@
 
 // Variables
 @import 'variables';
+@import 'header';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+header {
+    display: flex;
+}
