@@ -1,0 +1,33 @@
+.add-post {
+   
+    margin: 50px;
+    float: left;
+    i {
+        font-size: 70px;
+
+    }
+}
+
+.post-container {
+    width: 500px;
+    // height: 300px;
+    margin: 25px auto;
+    border: 1px solid black;
+    h5 {
+        height: 25px;
+        margin: 5px 15px 0;
+    }
+    .text-container {
+        border: 3px solid black;
+        margin: 0 auto 5px;
+        padding: 3px;
+        width: 90%;
+        // height: 80%;
+        // height: calc(100% - 60px);
+    }
+    span {
+        height: 25px;
+        margin: 0 15px;
+        
+    }
+}

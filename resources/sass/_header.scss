@@ -2,11 +2,19 @@ header {
     // display: flex;non lo prende
 
    justify-content: space-between;
-   background-color: aquamarine;
+   background-color: rgb(21, 21, 94);
+   color: white;
    a {
         margin: 10px;
         font-size: 24px;
 
+    }
+    h1 {
+        padding: 5px;
+    }
+    h2 {
+        padding: 5px;
+        display: inline-block;
     }
 }
 

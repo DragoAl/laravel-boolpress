@@ -1,13 +1,47 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
 @import 'variables';
 @import 'header';
+@import 'posts';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 header {
     display: flex;
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+    h1 {
+        text-align: center;
+        margin: 20px auto;
+    }
+}
+.form-container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+        margin: 20px auto 0;
+    }
+    form {
+        margin: 40px auto;
+        label {
+            text-align: right;
+            padding: 5px;
+            width: 18%;
+        }
+        input {
+            width: 80%
+        }
+        .btn-info {
+            width: 150px;
+            text-align: center;
+         
+        }
+    }
 }
