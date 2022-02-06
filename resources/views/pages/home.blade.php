@@ -1,5 +1,12 @@
 @extends('layouts.main-layout')
 @section('content')
-    
-    <h1>Hello</h1>
+    @auth
+        <h1>Hello</h1>
+
+    @else 
+     <h2>you have to login</h2>
+    @endauth
+   
+
+
 @endsection

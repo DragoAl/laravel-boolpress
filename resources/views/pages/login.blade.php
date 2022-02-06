@@ -1,15 +1,30 @@
 @extends('layouts.main-layout')
 @section('content')
-    <h2> Login </h2>
-    <form action="" method="POST">
-        @method("POST")
-        @csrf
+    <section class="form-container">
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Insert E-mail"> <br>
-        <label for="password">Password</label>
-        <input type="password" name="password"> <br>
-        <input type="submit" value="Login">
+   
+        @if ($errors->any()) 
+            <div class="alert alert-danger"> 
+                <ul> 
+                    @foreach ($errors->all() as $error) 
+                        <li>{{ $error }}</li> 
+                    @endforeach 
+                </ul> 
+            </div> 
+        @endif 
+        <h2> Login </h2>
+        <form action="{{route('login')}}" method="POST">
+            @method("POST")
+            @csrf
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Insert Email"> <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Insert password"> <br>
+            <input class="btn btn-info" type="submit" value="Login">
+    
+        </form>    
 
-    </form>    
+    </section>
+    
 @endsection
