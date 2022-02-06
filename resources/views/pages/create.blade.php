@@ -7,6 +7,9 @@
             @csrf
             <label for="title">Titolo:</label>
             <input type="text" name="title"> <br>
+
+            <label for="subtitle">Sottotitolo:</label>
+            <input type="text" name="subtitle"> <br>
     
             <label for='author'>Autore:</label>
             <input type="text" value={{Auth::user()-> name}} name='author'> <br>
@@ -16,6 +19,9 @@
     
             <label for="date">Date:</label>
             <input type="date" name="date" >  <br>
+
+            <label for="views">Views:</label>
+            <input type="number" name="views" >  <br>
 
             <input class="btn btn-info" type="submit" value="CREATE">
     

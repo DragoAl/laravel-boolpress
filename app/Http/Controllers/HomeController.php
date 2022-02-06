@@ -34,7 +34,22 @@ class HomeController extends Controller
     public function create() {
         return view('pages.create');
     }
-    public function store() {
+    public function store(Request $request) {
+        $data = $request -> validate([
+            'title' => 'required|string|max:255',
+            'subtitle' => 'required|string|max:255',
+            'author' => 'required|string|max:255',
+            'text' => 'required|string|max:2000',
+            'date' => 'required|date',
+            'views' => 'required|numeric'
+
+        ]);
+        $post = Post::create($data);
+
+        return redirect() -> route('home');
+
+
+
 
     }
 }
