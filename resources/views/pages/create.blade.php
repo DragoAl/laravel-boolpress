@@ -5,6 +5,7 @@
         <form action="{{route('store')}}" method="post">
             @method('post')
             @csrf
+
             <label for="title">Titolo:</label>
             <input type="text" name="title"> <br>
 
