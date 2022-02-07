@@ -27,10 +27,10 @@ class HomeController extends Controller
     // {
     //     return view('home');
     // }
-    public function posts() {
-        $posts = Post::all();
-        return view('pages.posts', compact('posts'));
-    }
+    // public function posts() {
+    //     $posts = Post::all();
+    //     return view('pages.posts', compact('posts'));
+    // }
     public function create() {
         return view('pages.create');
     }
