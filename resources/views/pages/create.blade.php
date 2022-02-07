@@ -17,12 +17,12 @@
     
             <label for="text">Testo:</label>
             <textarea type="text" name="text"> </textarea> <br>
-    
+{{--     
             <label for="date">Date:</label>
-            <input type="date" name="date" >  <br>
+            <input type="date" name="date" >  <br> --}}
 
-            <label for="views">Views:</label>
-            <input type="number" name="views" >  <br>
+            {{-- <label for="views">Views:</label>
+            <input type="number" name="views" >  <br> --}}
 
             <label for="category_name">Categoria:</label>
             <select name="category_id" > 

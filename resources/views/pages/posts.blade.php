@@ -14,8 +14,9 @@
                 <h5>{{$post-> title}}</h5>
                 <span>{{$post -> category -> category_name}}</span>
                 <div class="text-container"> {{$post-> text}}</div>
-                <span>Data Pubblicazione:{{$post-> date}} </span>
-                <span>Autore : {{$post-> author}}</span>
+                <span>Data Pubblicazione:{{$post-> created_at}} </span>
+                <span>Autore : {{$post-> author}}</span> <br>
+                <span>Likes: {{$post -> likes}}</span>
 
             </div>
             
