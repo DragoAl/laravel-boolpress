@@ -12,7 +12,10 @@ class Post extends Model
         'date',
         'author',
         'text',
-        'views'
+        'likes'
 
     ];
+    public function category() {
+        return $this -> belongsTo(Category::class);
+    }
 }
