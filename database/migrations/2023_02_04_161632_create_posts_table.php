@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration
             $table -> id();
             $table -> string('title');
             $table -> string('subtitle');
-            $table -> date('date');
             $table -> string('author');
             $table -> text('text');
             $table -> integer('likes') ->unsigned() -> default(0);
