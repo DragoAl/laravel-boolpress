@@ -4641,9 +4641,9 @@ header h2 {
 }
 
 .post-container {
-  width: 500px;
+  width: 600px;
   margin: 25px auto;
-  border: 1px solid black;
+  border: 1px solid #2f77a7;
 }
 
 .post-container h5 {
@@ -4652,10 +4652,10 @@ header h2 {
 }
 
 .post-container .text-container {
-  border: 3px solid black;
+  border: 3px solid #1e1575;
   margin: 0 auto 5px;
   padding: 3px;
-  width: 90%;
+  width: 95%;
 }
 
 .post-container span {
@@ -15659,7 +15659,8 @@ header {
   width: 18%;
 }
 
-.form-container form input {
+.form-container form input,
+.form-container form textarea {
   width: 80%;
 }
 
