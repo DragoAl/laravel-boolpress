@@ -21,12 +21,16 @@ use Illuminate\Support\Facades\Route;
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@home')->name('home');
-Route::get('/posts', 'GuestController@posts')->name('posts');
-Route::get('/posts/create', 'HomeController@create')->name('create');
-Route::post('/posts/store', 'HomeController@store')->name('store');
-
 
 Route::get('/', 'GuestController@home') ->name('home');
+
+Route::get('/posts', 'PostController@posts')->name('posts');
+
+Route::middleware('auth')->prefix('posts')->group(function() {
+    Route::get('/create', 'PostController@create')->name('create');
+    Route::post('/store', 'PostController@store')->name('store');
+
+});
 
 Route::get('/login', 'Auth\LoginController@showLogin') ->name('show.login');
 Route::post('/login', 'Auth\LoginController@login') ->name('login');
