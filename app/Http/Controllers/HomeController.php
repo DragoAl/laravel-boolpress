@@ -33,31 +33,31 @@ class HomeController extends Controller
     //     $posts = Post::all();
     //     return view('pages.posts', compact('posts'));
     // }
-    public function create() {
-        $categories = Category::all();
-        return view('pages.create', compact('categories'));
-    }
-    public function store(Request $request) {
-        $data = $request -> validate([
-            'title' => 'required|string|max:255', 
-            'subtitle' => 'required|string|max:255',
-            // 'author' => 'required|string|max:255',
-            'text' => 'required|string|max:2000',
-            'date' => 'required|date',
-            'views' => 'required|numeric'
+    // public function create() {
+    //     $categories = Category::all();
+    //     return view('pages.create', compact('categories'));
+    // }
+    // public function store(Request $request) {
+    //     $data = $request -> validate([
+    //         'title' => 'required|string|max:255', 
+    //         'subtitle' => 'required|string|max:255',
+    //         // 'author' => 'required|string|max:255',
+    //         'text' => 'required|string|max:2000',
+    //         // 'date' => 'required|date',
+    //         // 'views' => 'required|numeric'
 
-        ]);
-        $data['author']= Auth::user() -> name;
-        $category = Category::findOrFail($request -> get('category_id'));
+    //     ]);
+    //     $data['author']= Auth::user() -> name;
+    //     $category = Category::findOrFail($request -> get('category_id'));
 
-        $post = Post::make($data);
-        $post -> category() -> associate($category);
-        $post -> save();
+    //     $post = Post::make($data);
+    //     $post -> category() -> associate($category);
+    //     $post -> save();
 
-        return redirect() -> route('posts');
-
-
+    //     return redirect() -> route('posts');
 
 
-    }
+
+
+    // }
 }
