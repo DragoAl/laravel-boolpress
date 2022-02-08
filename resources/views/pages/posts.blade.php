@@ -17,6 +17,12 @@
                 <span>Data Pubblicazione:{{$post-> created_at}} </span>
                 <span>Autore : {{$post-> author}}</span> <br>
                 <span>Likes: {{$post -> likes}}</span>
+                <span>Tags:
+                    @foreach ($post -> tags as $tag)
+                        - {{$tag -> tag_name}} 
+                    @endforeach
+                                            
+                </span>
 
             </div>
             

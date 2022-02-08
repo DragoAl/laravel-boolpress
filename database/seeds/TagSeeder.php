@@ -13,8 +13,8 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tag::class, 5) -> create() -> each(function($tag){
-            $posts = Post::inRandomOrder() -> limit(rand(0,5)) -> get();
+        factory(Tag::class, 10) -> create() -> each(function($tag){
+            $posts = Post::inRandomOrder() -> limit(5) -> get();
             $tag -> posts() -> attach($posts);
             $tag -> save();
 

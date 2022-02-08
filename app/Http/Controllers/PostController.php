@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Post;
 use App\Category;
+use App\Tag;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -17,24 +18,30 @@ class PostController extends Controller
     }
     public function create() {
         $categories = Category::all();
-        return view('pages.create', compact('categories'));
+        $tags = Tag::all();
+        return view('pages.create', compact('categories', 'tags'));
     }
     public function store(Request $request) {
         $data = $request -> validate([
             'title' => 'required|string|max:255', 
             'subtitle' => 'required|string|max:255',
-            // 'author' => 'required|string|max:255',
             'text' => 'required|string|max:2000',
-            // 'date' => 'required|date',
-            // 'views' => 'required|numeric'
-
         ]);
+
         $data['author']= Auth::user() -> name;
-        $category = Category::findOrFail($request -> get('category_id'));
 
         $post = Post::make($data);
+        
+        $category = Category::findOrFail($request -> get('category_id'));
+
         $post -> category() -> associate($category);
         $post -> save();
+
+        $tags = Tag::findOrFail($request -> get('tags'));
+        $post  -> tags() -> attach($tags); 
+        $post -> save();
+
+
 
         return redirect() -> route('posts');
 

@@ -15669,3 +15669,7 @@ header {
   text-align: center;
 }
 
+.form-container form .checkbox {
+  width: 10px;
+}
+
