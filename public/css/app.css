@@ -15669,7 +15669,26 @@ header {
   text-align: center;
 }
 
-.form-container form .checkbox {
+.form-container form .categ-tag-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.form-container form .categ-tag-container label {
+  width: 50%;
+}
+
+.form-container form .categ-tag-container .tags-box {
+  border: 1px solid blueviolet;
+}
+
+.form-container form .categ-tag-container .checkbox {
   width: 10px;
+}
+
+.form-container form .categ-tag-container .tag-name {
+  display: inline-block;
+  width: 100px;
 }
 

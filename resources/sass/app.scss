@@ -43,8 +43,26 @@ header {
             text-align: center;
          
         }
-        .checkbox {
-            width: 10px;
+        .categ-tag-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px 0;
+            label {
+                width: 50%;
+            }
+            .tags-box {
+                border: 1px solid blueviolet;
+            }
+
+           .checkbox {
+                width: 10px;
+            
+            }
+            .tag-name {
+                display: inline-block;
+                width: 100px;
+            } 
         }
+        
     }
 }
