@@ -15,7 +15,7 @@ class PostSeeder extends Seeder
     {
         factory(Post::class, 30) -> make() ->each(function($post){
             $category = Category::inRandomOrder() -> limit(1) -> first();
-            $post -> category() -> associate($category);
+            $post -> category() -> associate($category); //asscociate per relazione 1aN--save per relazione Na1
 
             $post -> save();
 
