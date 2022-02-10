@@ -15692,3 +15692,16 @@ header {
   width: 100px;
 }
 
+.post-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-head div {
+  margin: 10px;
+}
+
+.post-head div a {
+  margin: 0 10px;
+}
+

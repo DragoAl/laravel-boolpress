@@ -11,10 +11,17 @@
         <h1>Posts</h1>
         @foreach ($posts as $post)
             <div class="post-container">
-                <h5>{{$post-> title}}</h5>
+                <div class="post-head">
+                    <h5>{{$post-> title}}</h5>
+                    <div>
+                        <a href="{{route('edit', $post ->id)}}"><i class="fas fa-pen"></i></a>
+                        <a href="{{route('delete', $post->id)}}"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </div>
+                              
                 <span>{{$post -> category -> category_name}}</span>
                 <div class="text-container"> {{$post-> text}}</div>
-                <span>Data Pubblicazione:{{$post-> created_at}} </span>
+                <span>Data Pubblicazione:{{$post-> created_at -> format('d/m/Y H:m')}} </span>
                 <span>Autore : {{$post-> author}}</span> <br>
                 <span>Likes: {{$post -> likes}}</span>
                 <span>Tags:

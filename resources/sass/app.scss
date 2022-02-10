@@ -66,3 +66,13 @@ header {
         
     }
 }
+.post-head {
+    display: flex;
+    justify-content: space-between;
+    div {
+        margin: 10px;
+        a {
+            margin: 0 10px;
+        }
+    }
+}

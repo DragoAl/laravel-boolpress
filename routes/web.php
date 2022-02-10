@@ -29,7 +29,12 @@ Route::get('/posts', 'PostController@posts')->name('posts');
 Route::middleware('auth')->prefix('posts')->group(function() {
     Route::get('/create', 'PostController@create')->name('create');
     Route::post('/store', 'PostController@store')->name('store');
+    Route::get('/edit/{id}', 'PostController@edit')->name('edit');
+    Route::post('/update/{id}', 'PostController@update')->name('update');
+    Route::get('delete/{id}', 'PostController@delete')->name('delete');
 
+
+ 
 });
 
 Route::get('/login', 'Auth\LoginController@showLogin') ->name('show.login');
